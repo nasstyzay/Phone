@@ -23,6 +23,7 @@ def create_db(conn):
     conn.commit()
 
 
+
 def add_client(conn, first_name, last_name, email, phones=None):
     with conn.cursor() as cur:
         cur.execute("""
