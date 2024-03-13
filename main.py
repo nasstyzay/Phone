@@ -115,12 +115,12 @@ def find_client(conn, first_name=None, last_name=None, email=None, phone=None):
 
     with psycopg2.connect(database="clients_db", user="postgres", password="postgres") as conn:
         create_db(conn)
-        add_client(conn, "John", "Doe", "johndoe@example.com", ["+123456789"])
-        print(find_client(conn, first_name="John"))
-        add_phone(conn, 1, "+987654321")
-        change_client(conn, 1, first_name="Johnny")
-        print(find_client(conn, first_name="Johnny"))
-        delete_phone(conn, 1, "+987654321")
+        add_client(conn, "Игорь", "Иванов", "johndoe@example.com", ["+123456789"])
+        print(find_client(conn, first_name="Иван"))
+        add_phone(conn, 1, "+987619376")
+        change_client(conn, 1, first_name="Кирилл")
+        print(find_client(conn, first_name="Александр"))
+        delete_phone(conn, 1, "+987294751")
         delete_client(conn, 1)
 
     conn.close()
