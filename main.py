@@ -126,4 +126,5 @@ def find_client(conn, first_name=None, last_name=None, email=None, phone=None):
         delete_phone(conn, 1, "+987294751")
         delete_client(conn, 1)
 
+
     conn.close()
