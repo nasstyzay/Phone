@@ -88,6 +88,7 @@ def delete_client(conn, client_id):
     conn.commit()
 
 
+
 def find_client(conn, first_name=None, last_name=None, email=None, phone=None):
     with conn.cursor() as cur:
         if phone:
